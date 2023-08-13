@@ -1,7 +1,11 @@
+import PropTypes from "prop-types"; // Import PropTypes
 import ToDoItem from "./ToDoItem";
 
 function ToDoList(props) {
-  const toDoList = props.toDoList;
+  // Destructure the 'toDoList' prop
+  const { toDoList } = props;
+
+  // Map over the to-do list and render ToDoItem components
   return (
     <div>
       {toDoList.map((toDoTitle, index) => {
@@ -10,4 +14,10 @@ function ToDoList(props) {
     </div>
   );
 }
+
+// Define prop types to validate the 'toDoList' prop
+ToDoList.propTypes = {
+  toDoList: PropTypes.arrayOf(PropTypes.string).isRequired,
+};
+
 export default ToDoList;
