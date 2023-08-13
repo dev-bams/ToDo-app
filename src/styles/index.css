@@ -1,0 +1,39 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+body {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+#root,
+.todo {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem;
+  margin: auto;
+}
+.todo {
+  max-width: 600px;
+  border: 1px solid red;
+}
+.todo__form {
+  width: 100%;
+  display: flex;
+  border: 1px solid red;
+  gap: 1rem;
+  height: 50px;
+}
+.todo__input {
+  width: 80%;
+}
+.todo__add-btn {
+  width: 20%;
+}
