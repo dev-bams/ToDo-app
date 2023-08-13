@@ -11,9 +11,12 @@ function ToDoWrapper() {
     // Use the setToDoList function to update the state
     setToDoList((prevToDoList) => [...prevToDoList, newToDo]);
   }
-  // function removeToDo(){
 
-  // }
+  function deleteToDo(toDoID) {
+    setToDoList((prevToDoList) =>
+      prevToDoList.filter((toDoItem) => toDoItem.toDoID !== toDoID)
+    );
+  }
 
   // Component rendering
   return (
@@ -22,7 +25,9 @@ function ToDoWrapper() {
       <TodoForm addToDo={addToDo} />
 
       {/* Render the ToDoList component */}
-      {toDoList.length > 0 && <ToDoList toDoList={toDoList} />}
+      {toDoList.length > 0 && (
+        <ToDoList toDoList={toDoList} deleteToDo={deleteToDo} />
+      )}
     </div>
   );
 }

@@ -3,10 +3,13 @@ function TodoForm({ addToDo }) {
   // Function to handle form submission
   function handleSubmit(e) {
     e.preventDefault(); // Prevents the default form submission behavior
-    addToDo({
-      toDoTitle: e.target.querySelector("#js-todo__input").value,
-      toDoID: crypto.randomUUID(),
-    }); // Calls 'addToDo' with input value
+    const toDoTitle = e.target.querySelector("#js-todo__input").value;
+    if (toDoTitle.trim().length >= 1) {
+      addToDo({
+        toDoTitle: toDoTitle,
+        toDoID: crypto.randomUUID(),
+      }); // Calls 'addToDo' with input value
+    }
   }
 
   // Component rendering
