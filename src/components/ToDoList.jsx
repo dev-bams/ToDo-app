@@ -7,7 +7,7 @@ function ToDoList(props) {
 
   // Map over the to-do list and render ToDoItem components
   return (
-    <div>
+    <div className="todo__list">
       {toDoList.map((toDoTitle, index) => {
         return <ToDoItem key={index} toDoTitle={toDoTitle} />;
       })}

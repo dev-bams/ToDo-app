@@ -3,7 +3,8 @@ import PropTypes from "prop-types";
 function ToDoItem(props) {
   return (
     <div className="todo__item">
-      <h4>{props.toDoTitle}</h4>
+      <h4 className="todo__name">{props.toDoTitle}</h4>
+      <button className="todo__delete">delete</button>
     </div>
   );
 }

@@ -23,6 +23,7 @@ body {
 .todo {
   max-width: 600px;
   border: 1px solid red;
+  gap: 1.5rem;
 }
 .todo__form {
   width: 100%;
@@ -31,9 +32,27 @@ body {
   gap: 1rem;
   height: 50px;
 }
-.todo__input {
+.todo__input,
+.todo__name {
   width: 80%;
 }
-.todo__add-btn {
+.todo__add-btn,
+.todo__delete {
   width: 20%;
+}
+.todo__list{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.todo__item{
+  height: 40px;
+  display: flex;
+  border: 1px solid green;
+}
+.todo__delete{
+  background-color: red;
+  color: white;
+  border: none;
+  outline: none;
 }
