@@ -7,16 +7,19 @@ function ToDoWrapper() {
   const [toDoList, setToDoList] = useState([]);
 
   // Function to update the to-do list with a new item
-  function updateToDo(newToDo) {
+  function addToDo(newToDo) {
     // Use the setToDoList function to update the state
     setToDoList((prevToDoList) => [...prevToDoList, newToDo]);
   }
+  // function removeToDo(){
+
+  // }
 
   // Component rendering
   return (
     <div className="todo">
       {/* Render the TodoForm component and pass the 'updateToDo' function */}
-      <TodoForm updateToDo={updateToDo} />
+      <TodoForm addToDo={addToDo} />
 
       {/* Render the ToDoList component */}
       {toDoList.length > 0 && <ToDoList toDoList={toDoList} />}

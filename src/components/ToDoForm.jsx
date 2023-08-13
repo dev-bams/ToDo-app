@@ -1,11 +1,12 @@
-function TodoForm(prop) {
-  // Destructuring the 'updateToDo' prop from 'prop'
-  const updateToDo = prop.updateToDo;
-
+import PropTypes from "prop-types"; // Import PropTypes
+function TodoForm({ addToDo }) {
   // Function to handle form submission
   function handleSubmit(e) {
     e.preventDefault(); // Prevents the default form submission behavior
-    updateToDo(e.target.querySelector("#js-todo__input").value); // Calls 'updateToDo' with input value
+    addToDo({
+      toDoTitle: e.target.querySelector("#js-todo__input").value,
+      toDoID: crypto.randomUUID(),
+    }); // Calls 'addToDo' with input value
   }
 
   // Component rendering
@@ -23,5 +24,10 @@ function TodoForm(prop) {
     </form>
   );
 }
+
+// Define prop types for the 'addToDo' prop
+TodoForm.propTypes = {
+  addToDo: PropTypes.func.isRequired,
+};
 
 export default TodoForm;
