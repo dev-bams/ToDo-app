@@ -8,7 +8,9 @@ function TodoForm({ addToDo }) {
       addToDo({
         toDoTitle: toDoTitle,
         toDoID: crypto.randomUUID(),
+        isToDoCompleted: false,
       }); // Calls 'addToDo' with input value
+      e.target.querySelector("#js-todo__input").value = "";
     }
   }
 

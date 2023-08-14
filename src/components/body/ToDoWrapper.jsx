@@ -1,10 +1,12 @@
 import ToDoList from "./ToDoList"; // Import the ToDoList component
 import TodoForm from "./ToDoForm"; // Import the TodoForm component
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 function ToDoWrapper() {
   // State to manage the list of to-do items
-  const [toDoList, setToDoList] = useState([]);
+  const [toDoList, setToDoList] = useState(
+    JSON.parse(localStorage.getItem("toDoList")) || []
+  );
 
   // Function to update the to-do list with a new item
   function addToDo(newToDo) {
@@ -18,6 +20,21 @@ function ToDoWrapper() {
     );
   }
 
+  function markCompleted(toDoID) {
+    const newList = toDoList.map((toDoItem) => {
+      if (toDoItem.toDoID === toDoID) {
+        return { ...toDoItem, isToDoCompleted: !toDoItem.isToDoCompleted };
+      }
+      return toDoItem;
+    });
+    setToDoList(newList);
+    console.log(newList);
+  }
+
+  useEffect(() => {
+    localStorage.setItem("toDoList", JSON.stringify(toDoList));
+  }, [toDoList]);
+
   // Component rendering
   return (
     <div className="todo">
@@ -26,7 +43,11 @@ function ToDoWrapper() {
 
       {/* Render the ToDoList component */}
       {toDoList.length > 0 && (
-        <ToDoList toDoList={toDoList} deleteToDo={deleteToDo} />
+        <ToDoList
+          toDoList={toDoList}
+          deleteToDo={deleteToDo}
+          markCompleted={markCompleted}
+        />
       )}
     </div>
   );

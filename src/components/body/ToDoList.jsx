@@ -1,7 +1,7 @@
 import PropTypes from "prop-types"; // Import PropTypes
 import ToDoItem from "./ToDoItem";
 
-function ToDoList({ toDoList, deleteToDo }) {
+function ToDoList({ toDoList, deleteToDo, markCompleted }) {
   // Map over the to-do list and render ToDoItem components
   return (
     <div className="todo__list">
@@ -12,6 +12,7 @@ function ToDoList({ toDoList, deleteToDo }) {
             toDoID={toDoID}
             toDoTitle={toDoTitle}
             deleteToDo={deleteToDo}
+            markCompleted={markCompleted}
           />
         );
       })}
@@ -23,6 +24,7 @@ function ToDoList({ toDoList, deleteToDo }) {
 ToDoList.propTypes = {
   toDoList: PropTypes.arrayOf(PropTypes.object).isRequired,
   deleteToDo: PropTypes.func.isRequired,
+  markCompleted: PropTypes.func.isRequired,
 };
 
 export default ToDoList;

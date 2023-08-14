@@ -33,17 +33,19 @@ body {
   max-width: 600px;
   gap: 1.5rem;
   background-color: var(--secondary-color);
+  border: 1px solid red;
+  height: 100%;
 }
 .todo__form {
   width: 100%;
   display: flex;
-  border: 1px solid red;
   gap: 1rem;
   height: 50px;
 }
 .todo__add-btn {
   background-color: #15b789;
   color: white;
+  cursor: pointer;
 }
 .todo__input,
 .todo__name {
@@ -68,4 +70,5 @@ body {
   color: white;
   border: none;
   outline: none;
+  cursor: pointer;
 }

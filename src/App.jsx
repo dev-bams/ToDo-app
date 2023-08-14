@@ -1,4 +1,4 @@
-import ToDoWrapper from "./components/ToDoWrapper";
+import ToDoWrapper from "./components/body/ToDoWrapper";
 
 function App() {
   return <ToDoWrapper />;
