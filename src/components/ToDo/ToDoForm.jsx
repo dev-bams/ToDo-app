@@ -30,6 +30,7 @@ function TodoForm({ addToDo }) {
           setToDo(e.target.value);
         }}
       />
+      <input type="date"/>
       <button className="todo__add-btn" type="submit">
         Add
       </button>
