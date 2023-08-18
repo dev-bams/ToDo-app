@@ -1,5 +1,8 @@
 import PropTypes from "prop-types"; // Import PropTypes
+import { useState } from "react";
 function TodoForm({ addToDo }) {
+  //Controlled input
+  const [toDo, setToDo] = useState("");
   // Function to handle form submission
   function handleSubmit(e) {
     e.preventDefault(); // Prevents the default form submission behavior
@@ -22,6 +25,10 @@ function TodoForm({ addToDo }) {
         id="js-todo__input"
         type="text"
         placeholder="Enter ToDo"
+        value={toDo}
+        onChange={(e) => {
+          setToDo(e.target.value);
+        }}
       />
       <button className="todo__add-btn" type="submit">
         Add
