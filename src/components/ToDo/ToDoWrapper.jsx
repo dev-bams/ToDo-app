@@ -36,7 +36,7 @@ function ToDoWrapper() {
 
   // Component rendering
   return (
-    <div className="border-2 max-w-2xl gap-6 h-full">
+    <div className="gap-6 h-full">
       {/* Render the TodoForm component and pass the 'updateToDo' function */}
       <TodoForm addToDo={addToDo} />
 

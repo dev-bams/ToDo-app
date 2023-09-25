@@ -1,5 +1,11 @@
+import DarkMode from "../../assets/icons/DarkMode";
+
 const Navbar = () => {
-  return <div>Navbar</div>;
+  return (
+    <nav className=" flex">
+      <DarkMode />
+    </nav>
+  );
 };
 
 export default Navbar;

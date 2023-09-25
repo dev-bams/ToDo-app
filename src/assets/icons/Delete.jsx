@@ -1,11 +1,8 @@
 function Delete() {
   return (
     <svg
-      className="fluentIcon ___12fm75w f1w7gpdv fez10in fg4l7m0"
-      fill="currentColor"
-      aria-hidden="true"
-      width="20"
-      height="20"
+      width="20px"
+      height="20px"
       viewBox="0 0 20 20"
       xmlns="http://www.w3.org/2000/svg"
     >
