@@ -16,7 +16,7 @@
   /* 2 */
   border-style: solid;
   /* 2 */
-  border-color: currentColor;
+  border-color: #e5e7eb;
   /* 2 */
 }
 
@@ -578,26 +578,37 @@ video {
   border-width: 2px;
 }
 
-.bg-p-color {
+.border {
+  border-width: 1px;
+}
+
+.border-green-950 {
+  --tw-border-opacity: 1;
+  border-color: rgb(5 46 22 / var(--tw-border-opacity));
+}
+
+.bg-dark-primary-bg {
   --tw-bg-opacity: 1;
-  background-color: rgb(0 167 225 / var(--tw-bg-opacity));
+  background-color: rgb(17 16 15 / var(--tw-bg-opacity));
 }
 
-.bg-\[\] {
-  background-color: ;
-}
-
-.bg-\[15b789\] {
-  background-color: 15b789;
-}
-
-.bg-\[\#15b789\] {
+.bg-green-400 {
   --tw-bg-opacity: 1;
-  background-color: rgb(21 183 137 / var(--tw-bg-opacity));
+  background-color: rgb(74 222 128 / var(--tw-bg-opacity));
+}
+
+.bg-green-600 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(22 163 74 / var(--tw-bg-opacity));
 }
 
 .p-2 {
   padding: 0.5rem;
+}
+
+.text-slate-50 {
+  --tw-text-opacity: 1;
+  color: rgb(248 250 252 / var(--tw-text-opacity));
 }
 
 .filter {

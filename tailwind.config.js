@@ -2,11 +2,16 @@
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
-    colors: {
-      "p-color": "#00a7e1",
-      "s-color": "#023",
+    extend: {
+      colors: {
+        // Add your custom colors here
+        "dark-primary-bg": "#11100f",       // Your custom color for dark primary background
+        "dark-secondary-bg": "#323130",     // Your custom color for dark secondary background
+        "todo-hover": "#3b3a39",           // Your custom color for todo hover
+        "accent": "#6797ca",               // Your custom accent color
+        // ... Add more custom colors as needed
+      },
     },
-    extend: {},
   },
   plugins: [],
 };

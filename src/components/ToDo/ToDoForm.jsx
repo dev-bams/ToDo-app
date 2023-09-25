@@ -1,37 +1,45 @@
 import PropTypes from "prop-types"; // Import PropTypes
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 function TodoForm({ addToDo }) {
   //Controlled input
   const [toDo, setToDo] = useState("");
+  const inputElem = useRef(null);
   // Function to handle form submission
   function handleSubmit(e) {
     e.preventDefault(); // Prevents the default form submission behavior
-    const toDoTitle = e.target.querySelector("#js-todo__input").value;
+    const toDoTitle = inputElem.current.value;
     if (toDoTitle.trim().length >= 1) {
       addToDo({
-        toDoTitle: toDoTitle,
+        toDoTitle,
         toDoID: crypto.randomUUID(),
         isToDoCompleted: false,
       }); // Calls 'addToDo' with input value
-      e.target.querySelector("#js-todo__input").value = "";
     }
   }
 
+  useEffect(() => {
+    inputElem.current.value = "";
+  });
+
   // Component rendering
   return (
-    <form className="w-full flex gap-4 h-12" onSubmit={(e) => handleSubmit(e)}>
+    <form
+      className="w-full flex gap-4 h-12 border-2 border-green-950"
+      onSubmit={handleSubmit}
+    >
       <input
-        className="todo__input"
-        id="js-todo__input"
         type="text"
-        placeholder="Enter ToDo"
+        placeholder="Add a task"
         value={toDo}
         onChange={(e) => {
           setToDo(e.target.value);
         }}
+        ref={inputElem}
       />
-      <input type="date" className="todo__input" />
-      <button className="text-slate-50 cursor-pointer bg-green-600" type="submit">
+      <button
+        className="text-slate-50 cursor-pointer bg-green-600"
+        type="submit"
+      >
         Add
       </button>
     </form>
