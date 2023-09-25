@@ -1,5 +1,6 @@
 import PropTypes from "prop-types"; // Import PropTypes
 import { useEffect, useRef, useState } from "react";
+import Add from "../../assets/icons/Add";
 function TodoForm({ addToDo }) {
   //Controlled input
   const [toDo, setToDo] = useState("");
@@ -27,15 +28,19 @@ function TodoForm({ addToDo }) {
       className="w-full flex gap-4 h-12 border-2 border-green-950"
       onSubmit={handleSubmit}
     >
-      <input
-        type="text"
-        placeholder="Add a task"
-        value={toDo}
-        onChange={(e) => {
-          setToDo(e.target.value);
-        }}
-        ref={inputElem}
-      />
+      <div className="flex items-center">
+        <Add />
+        <input
+          type="text"
+          placeholder="Add a task"
+          value={toDo}
+          onChange={(e) => {
+            setToDo(e.target.value);
+          }}
+          ref={inputElem}
+        />
+      </div>
+
       <button
         className="text-slate-50 cursor-pointer bg-green-600"
         type="submit"
