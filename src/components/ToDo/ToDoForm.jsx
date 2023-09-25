@@ -19,7 +19,7 @@ function TodoForm({ addToDo }) {
 
   // Component rendering
   return (
-    <form className="todo__form" onSubmit={(e) => handleSubmit(e)}>
+    <form className="w-full flex gap-4 h-12" onSubmit={(e) => handleSubmit(e)}>
       <input
         className="todo__input"
         id="js-todo__input"
@@ -31,7 +31,7 @@ function TodoForm({ addToDo }) {
         }}
       />
       <input type="date" className="todo__input" />
-      <button className="todo__add-btn" type="submit">
+      <button className="text-slate-50 cursor-pointer bg-green-600" type="submit">
         Add
       </button>
     </form>

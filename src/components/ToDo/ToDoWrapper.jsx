@@ -1,7 +1,6 @@
 import ToDoList from "./ToDoList"; // Import the ToDoList component
 import TodoForm from "./ToDoForm"; // Import the TodoForm component
 import { useEffect, useState } from "react";
-import "./ToDo.css"
 
 function ToDoWrapper() {
   // State to manage the list of to-do items
@@ -38,7 +37,7 @@ function ToDoWrapper() {
 
   // Component rendering
   return (
-    <div className="todo">
+    <div className="border-2 max-w-2xl gap-6 h-full">
       {/* Render the TodoForm component and pass the 'updateToDo' function */}
       <TodoForm addToDo={addToDo} />
 
