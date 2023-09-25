@@ -1,6 +1,7 @@
 import PropTypes from "prop-types";
 import Uncompleted from "../../assets/icons/Uncompleted";
 import Completed from "../../assets/icons/Completed";
+import Favorite from "../../assets/icons/Favorite";
 import Delete from "../../assets/icons/Delete";
 
 function ToDoItem({
@@ -11,16 +12,21 @@ function ToDoItem({
   markCompleted,
 }) {
   return (
-    <div className=" flex gap-4 border-2">
+    <div className=" flex gap-4 h-12 bg-dark-secondary-bg items-center pr-4 pl-4">
       <button
+        className="h-full"
         onClick={() => {
           markCompleted(toDoID);
         }}
       >
         {isToDoCompleted ? <Completed /> : <Uncompleted />}
       </button>
-      <h4>{toDoTitle}</h4>
+      <h4 className="h-full flex items-center flex-grow">{toDoTitle}</h4>
+      <button>
+        <Favorite />
+      </button>
       <button
+        className="h-full"
         onClick={() => {
           deleteToDo(toDoID);
         }}

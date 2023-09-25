@@ -538,12 +538,8 @@ video {
   margin: auto;
 }
 
-.mb-8 {
-  margin-bottom: 2rem;
-}
-
-.mb-6 {
-  margin-bottom: 1.5rem;
+.mb-4 {
+  margin-bottom: 1rem;
 }
 
 .flex {
@@ -566,16 +562,24 @@ video {
   height: 100%;
 }
 
-.h-1 {
-  height: 0.25rem;
-}
-
 .w-full {
   width: 100%;
 }
 
+.flex-grow {
+  flex-grow: 1;
+}
+
 .grow {
   flex-grow: 1;
+}
+
+.basis-12 {
+  flex-basis: 3rem;
+}
+
+.basis-80 {
+  flex-basis: 20rem;
 }
 
 .cursor-pointer {
@@ -594,6 +598,10 @@ video {
   justify-content: space-between;
 }
 
+.gap-2 {
+  gap: 0.5rem;
+}
+
 .gap-4 {
   gap: 1rem;
 }
@@ -602,8 +610,34 @@ video {
   gap: 1.5rem;
 }
 
-.gap-2 {
-  gap: 0.5rem;
+.gap-1 {
+  gap: 0.25rem;
+}
+
+.rounded {
+  border-radius: 0.25rem;
+}
+
+.rounded-lg {
+  border-radius: 0.5rem;
+}
+
+.rounded-sm {
+  border-radius: 0.125rem;
+}
+
+.rounded-md {
+  border-radius: 0.375rem;
+}
+
+.rounded-l {
+  border-top-left-radius: 0.25rem;
+  border-bottom-left-radius: 0.25rem;
+}
+
+.rounded-s {
+  border-start-start-radius: 0.25rem;
+  border-end-start-radius: 0.25rem;
 }
 
 .border-2 {
@@ -618,10 +652,6 @@ video {
   border-bottom-width: 1px;
 }
 
-.border-r {
-  border-right-width: 1px;
-}
-
 .border-none {
   border-style: none;
 }
@@ -629,11 +659,6 @@ video {
 .border-dark-line-color {
   --tw-border-opacity: 1;
   border-color: rgb(72 70 68 / var(--tw-border-opacity));
-}
-
-.border-red-600 {
-  --tw-border-opacity: 1;
-  border-color: rgb(220 38 38 / var(--tw-border-opacity));
 }
 
 .bg-dark-nav-color {
@@ -648,7 +673,7 @@ video {
 
 .bg-dark-secondary-bg {
   --tw-bg-opacity: 1;
-  background-color: rgb(50 49 48 / var(--tw-bg-opacity));
+  background-color: rgb(37 36 35 / var(--tw-bg-opacity));
 }
 
 .bg-green-600 {
@@ -662,6 +687,14 @@ video {
 
 .p-8 {
   padding: 2rem;
+}
+
+.p-4 {
+  padding: 1rem;
+}
+
+.p-2 {
+  padding: 0.5rem;
 }
 
 .pb-2 {
@@ -700,6 +733,22 @@ video {
   outline-offset: 2px;
 }
 
+.outline {
+  outline-style: solid;
+}
+
 .filter {
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
+.focus\:outline:focus {
+  outline-style: solid;
+}
+
+.focus\:outline-green-600:focus {
+  outline-color: #16a34a;
+}
+
+.focus\:outline-dark-line-color:focus {
+  outline-color: #484644;
 }

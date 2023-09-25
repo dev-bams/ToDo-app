@@ -5,7 +5,7 @@ function ToDoList({ toDoList, deleteToDo, markCompleted }) {
   console.log(toDoList);
   // Map over the to-do list and render ToDoItem components
   return (
-    <div className="todo__list">
+    <div className=" flex flex-col gap-2">
       {toDoList.map(({ toDoTitle, toDoID, isToDoCompleted }) => {
         return (
           <ToDoItem
