@@ -2,16 +2,18 @@ import PropTypes from "prop-types"; // Import PropTypes
 import ToDoItem from "./ToDoItem";
 
 function ToDoList({ toDoList, deleteToDo, markCompleted }) {
+  console.log(toDoList);
   // Map over the to-do list and render ToDoItem components
   return (
     <div className="todo__list">
-      {toDoList.map(({ toDoTitle, toDoID }) => {
+      {toDoList.map(({ toDoTitle, toDoID, isToDoCompleted }) => {
         return (
           <ToDoItem
             key={toDoID}
             toDoID={toDoID}
             toDoTitle={toDoTitle}
             deleteToDo={deleteToDo}
+            isToDoCompleted={isToDoCompleted}
             markCompleted={markCompleted}
           />
         );

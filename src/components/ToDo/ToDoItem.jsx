@@ -1,23 +1,31 @@
 import PropTypes from "prop-types";
+import Uncompleted from "../../assets/icons/Uncompleted";
+import Completed from "../../assets/icons/Completed";
+import Delete from "../../assets/icons/Delete";
 
-function ToDoItem({ toDoID, toDoTitle, deleteToDo, markCompleted }) {
+function ToDoItem({
+  toDoID,
+  toDoTitle,
+  deleteToDo,
+  isToDoCompleted,
+  markCompleted,
+}) {
   return (
-    <div className="todo__item">
-      <h4 className="todo__name">{toDoTitle}</h4>
+    <div className=" flex gap-4 border-2">
       <button
         onClick={() => {
           markCompleted(toDoID);
         }}
       >
-        mark
+        {isToDoCompleted ? <Completed /> : <Uncompleted />}
       </button>
+      <h4>{toDoTitle}</h4>
       <button
-        className="todo__delete"
         onClick={() => {
           deleteToDo(toDoID);
         }}
       >
-        delete
+        <Delete />
       </button>
     </div>
   );
@@ -27,6 +35,7 @@ function ToDoItem({ toDoID, toDoTitle, deleteToDo, markCompleted }) {
 ToDoItem.propTypes = {
   toDoTitle: PropTypes.string.isRequired,
   toDoID: PropTypes.string.isRequired,
+  isToDoCompleted: PropTypes.bool.isRequired,
   deleteToDo: PropTypes.func.isRequired,
   markCompleted: PropTypes.func.isRequired,
 };

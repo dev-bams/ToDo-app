@@ -25,10 +25,9 @@ function ToDoWrapper() {
       if (toDoItem.toDoID === toDoID) {
         return { ...toDoItem, isToDoCompleted: !toDoItem.isToDoCompleted };
       }
-      return toDoItem;
+      return;
     });
     setToDoList(newList);
-    console.log(newList);
   }
 
   useEffect(() => {
