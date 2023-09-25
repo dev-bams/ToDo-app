@@ -1,5 +1,6 @@
 import ToDoList from "./ToDoList"; // Import the ToDoList component
 import TodoForm from "./ToDoForm"; // Import the TodoForm component
+import CurrentDate from "../date/Date";
 import { useEffect, useState } from "react";
 
 function ToDoWrapper() {
@@ -36,7 +37,8 @@ function ToDoWrapper() {
 
   // Component rendering
   return (
-    <div className="gap-6 h-full h-full p-8">
+    <div className="gap-6 h-full p-8">
+      <CurrentDate />
       {/* Render the TodoForm component and pass the 'updateToDo' function */}
       <TodoForm addToDo={addToDo} />
 
