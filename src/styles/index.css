@@ -538,20 +538,44 @@ video {
   margin: auto;
 }
 
+.mb-8 {
+  margin-bottom: 2rem;
+}
+
+.mb-6 {
+  margin-bottom: 1.5rem;
+}
+
 .flex {
   display: flex;
+}
+
+.h-10 {
+  height: 2.5rem;
 }
 
 .h-12 {
   height: 3rem;
 }
 
+.h-14 {
+  height: 3.5rem;
+}
+
 .h-full {
   height: 100%;
 }
 
+.h-1 {
+  height: 0.25rem;
+}
+
 .w-full {
   width: 100%;
+}
+
+.grow {
+  flex-grow: 1;
 }
 
 .cursor-pointer {
@@ -578,6 +602,10 @@ video {
   gap: 1.5rem;
 }
 
+.gap-2 {
+  gap: 0.5rem;
+}
+
 .border-2 {
   border-width: 2px;
 }
@@ -586,22 +614,31 @@ video {
   border-width: 1px;
 }
 
-.border-b-2 {
-  border-bottom-width: 2px;
+.border-b {
+  border-bottom-width: 1px;
+}
+
+.border-r {
+  border-right-width: 1px;
 }
 
 .border-none {
   border-style: none;
 }
 
-.border-green-950 {
+.border-dark-line-color {
   --tw-border-opacity: 1;
-  border-color: rgb(5 46 22 / var(--tw-border-opacity));
+  border-color: rgb(72 70 68 / var(--tw-border-opacity));
 }
 
-.border-red-50 {
+.border-red-600 {
   --tw-border-opacity: 1;
-  border-color: rgb(254 242 242 / var(--tw-border-opacity));
+  border-color: rgb(220 38 38 / var(--tw-border-opacity));
+}
+
+.bg-dark-nav-color {
+  --tw-bg-opacity: 1;
+  background-color: rgb(27 26 25 / var(--tw-bg-opacity));
 }
 
 .bg-dark-primary-bg {
@@ -623,8 +660,24 @@ video {
   background-color: transparent;
 }
 
-.p-4 {
-  padding: 1rem;
+.p-8 {
+  padding: 2rem;
+}
+
+.pb-2 {
+  padding-bottom: 0.5rem;
+}
+
+.pl-4 {
+  padding-left: 1rem;
+}
+
+.pr-4 {
+  padding-right: 1rem;
+}
+
+.pt-2 {
+  padding-top: 0.5rem;
 }
 
 .text-slate-50 {
@@ -632,13 +685,19 @@ video {
   color: rgb(248 250 252 / var(--tw-text-opacity));
 }
 
+.placeholder-green-600::-moz-placeholder {
+  --tw-placeholder-opacity: 1;
+  color: rgb(22 163 74 / var(--tw-placeholder-opacity));
+}
+
+.placeholder-green-600::placeholder {
+  --tw-placeholder-opacity: 1;
+  color: rgb(22 163 74 / var(--tw-placeholder-opacity));
+}
+
 .outline-none {
   outline: 2px solid transparent;
   outline-offset: 2px;
-}
-
-.outline {
-  outline-style: solid;
 }
 
 .filter {

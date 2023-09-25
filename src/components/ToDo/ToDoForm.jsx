@@ -24,13 +24,11 @@ function TodoForm({ addToDo }) {
 
   // Component rendering
   return (
-    <form
-      className="w-full flex flex-col gap-4 h-12 border-2 border-green-950"
-      onSubmit={handleSubmit}
-    >
-      <div className="flex items-center border-2 border-red-50">
+    <form className="w-full flex flex-col gap-2 mb-6" onSubmit={handleSubmit}>
+      <div className="flex items-center pr-4 pl-4 gap-4 bg-dark-secondary-bg">
         <Add />
         <input
+          className=" bg-transparent outline-none border-none h-14 placeholder-green-600 grow"
           type="text"
           placeholder="Add a task"
           value={toDo}
@@ -42,7 +40,7 @@ function TodoForm({ addToDo }) {
       </div>
 
       <button
-        className="text-slate-50 cursor-pointer bg-green-600"
+        className="text-slate-50 cursor-pointer bg-green-600 h-10"
         type="submit"
       >
         Add
