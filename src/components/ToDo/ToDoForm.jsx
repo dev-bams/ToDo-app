@@ -25,10 +25,10 @@ function TodoForm({ addToDo }) {
   // Component rendering
   return (
     <form
-      className="w-full flex gap-4 h-12 border-2 border-green-950"
+      className="w-full flex flex-col gap-4 h-12 border-2 border-green-950"
       onSubmit={handleSubmit}
     >
-      <div className="flex items-center">
+      <div className="flex items-center border-[50px] border-red-50">
         <Add />
         <input
           type="text"
